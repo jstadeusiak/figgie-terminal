@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Figgie Terminal",
+  "version": "0.13.3",
+  "description": "Local game recording, opponent-aware probabilities, and fast manual Figgie trading.",
+  "content_scripts": [
+    {
+      "matches": ["https://www.figgie.com/play/*", "https://figgie.com/play/*"],
+      "js": [
+        "adapter.js",
+        "pnl.js",
+        "ui-assets.js",
+        "flow-chart.js",
+        "training-ui.js",
+        "recording-export.js",
+        "ui.js",
+        "content.js",
+        "ratings.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; worker-src 'self'"
+  }
+}

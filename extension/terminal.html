@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Figgie Terminal</title>
+    <link rel="stylesheet" href="terminal.css" />
+  </head>
+  <body>
+    <div id="figgie-fast" aria-label="Live Figgie terminal">
+      <header class="ff-header">
+        <div class="ff-brand">
+          <strong>figgie<span>pro</span></strong
+          ><span class="ff-workspace">All markets</span>
+        </div>
+        <span class="ff-replay" id="session">Connecting…</span
+        ><button id="show-figgie" type="button">Show Figgie</button>
+      </header>
+      <div class="ff-account">
+        <span>Cash <b id="cash">—</b></span
+        ><span>Cards <b id="cards">—</b></span
+        ><span class="ff-round-pnl"
+          ><span id="round-pnl-label">Round P&amp;L est.</span> <b id="round-pnl">—</b></span
+        ><span id="connection">Connecting to Figgie…</span
+        ><span id="recording-state" title="Game events are saved locally in this Chrome profile"
+          >REC · starting</span
+        ><label class="ff-keys"
+          ><input
+            type="checkbox"
+            id="ff-keys"
+            title="1/2 Spades · 3/4 Clubs · 5/6 Diamonds · 7/8 Hearts — Buy/Sell"
+          />
+          Keys 1–8</label
+        >
+      </div>
+      <section class="ff-inventory" aria-label="Consolidated inventory">
+        <div class="ff-inventory-label">My inventory<span id="inventory-total">—</span></div>
+        <div id="ff-inventory-items"></div>
+        <div class="ff-inventory-value">
+          <span id="inventory-valuation-label">Settlement est.</span
+          ><strong id="ff-inventory-ev">—</strong><span>If settled now</span>
+        </div>
+      </section>
+      <div
+        id="buyer-legend"
+        class="ff-buyer-legend"
+        aria-label="Player colors for chart buyers and quote owners"
+      ></div>
+      <div class="ff-model-workspace">
+        <main
+          class="ff-markets"
+          id="ff-markets"
+          aria-label="Four live suit charts and trading controls"
+        ></main>
+        <aside class="ff-model-panel" aria-label="Live Bayesian model">
+          <section class="ff-pnl-panel" aria-label="Net round profit and loss">
+            <div class="ff-section-heading">
+              Net round P&amp;L <span id="pnl-state">Est.</span><strong id="pnl-total">—</strong>
+            </div>
+            <div class="ff-scenario-heading">
+              P&amp;L by goal <span id="pnl-scenarios-state">Est. · settle now</span>
+            </div>
+            <div
+              id="pnl-scenarios"
+              class="ff-pnl-scenarios"
+              aria-label="Estimated net round P&amp;L for each possible goal suit"
+            ></div>
+          </section>
+          <div class="ff-section-heading">Bayesian model<span id="model-kind">Waiting</span></div>
+          <div class="ff-model-caption">
+            <span id="goal-odds-caption">Goal-suit probabilities</span
+            ><label class="ff-model-toggle"
+              ><input type="checkbox" id="opponent-model" checked /> Opponents</label
+            >
+          </div>
+          <div id="model-confidence" class="ff-confidence">
+            Opponent policy priors · not yet calibrated
+          </div>
+          <div id="ff-model-odds"></div>
+          <div class="ff-model-caption">Model prices <span>chips / card</span></div>
+          <table class="ff-model-prices">
+            <thead>
+              <tr>
+                <th>Suit</th>
+                <th title="10 × goal probability; no leader bonus">Base fair</th>
+                <th>Buy value</th>
+                <th>Sell value</th>
+              </tr>
+            </thead>
+            <tbody id="ff-model-prices"></tbody>
+          </table>
+          <div class="ff-model-estimate">
+            <span>Inventory payout EV</span><b id="ff-payout-ev">—</b><span>Card payout</span
+            ><span id="ff-base-ev">—</span
+            ><span title="Most goal cards wins; tied leaders split the bonus">Leader bonus</span
+            ><span id="ff-bonus-ev">—</span>
+          </div>
+          <div class="ff-model-footnote">
+            Base fair = 10 × goal odds. Buy/sell values add the marginal bonus change. No bonus P&L
+            excludes that uncertain bonus.
+          </div>
+          <details class="ff-model-method">
+            <summary>Evidence &amp; assumptions</summary>
+            <dl>
+              <dt>Starting hand</dt>
+              <dd id="starting-hand">—</dd>
+              <dt>Observed fills</dt>
+              <dd id="evidence">—</dd>
+              <dt>Posterior</dt>
+              <dd>
+                Exact legal-deal baseline, executed card movements and qualified observed asks, plus
+                sampled opponent behavior. In four-player Medium-bot games, sustained accumulators
+                shift estimated hidden holdings and bonus shares without changing goal odds.
+                Repeated pennies form one episode; your own choices do not confirm themselves. Cards
+                percentages exclude behavior.
+              </dd>
+              <dt>Pricing</dt>
+              <dd>
+                Immediate settlement value includes the leader bonus. Resting EV combines fill
+                probability with state-dependent counterparty selection. The horizon ends after 10
+                seconds, a reset, or loss of top position. It excludes later fills after being
+                outbid and future resale.
+              </dd>
+              <dt>Scope</dt>
+              <dd>
+                Opponent policies and initial fill rates are assumptions until scored on revealed
+                rounds. Hard evidence is exact; behavior and payout estimates use sampled worlds.
+                Only visible game data is recorded. Brief book changes may be missed by the DOM
+                adapter.
+              </dd>
+            </dl>
+          </details>
+        </aside>
+      </div>
+      <div class="ff-notice" aria-live="polite" id="ff-notice">
+        Waiting for a complete game snapshot.
+      </div>
+      <section class="ff-lower">
+        <div class="ff-flow">
+          <div class="ff-section-heading">
+            Player flow <span>Net cards traded since the deal</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th><span class="ff-suit-icon ff-suit-black">♠</span></th>
+                <th><span class="ff-suit-icon ff-suit-black">♣</span></th>
+                <th><span class="ff-suit-icon ff-suit-red">♦</span></th>
+                <th><span class="ff-suit-icon ff-suit-red">♥</span></th>
+              </tr>
+            </thead>
+            <tbody id="flow"></tbody>
+          </table>
+        </div>
+        <div class="ff-actions">
+          <div class="ff-section-heading">Recent trades <span>Buyer ← seller</span></div>
+          <div class="ff-trade-head">
+            <span>Fill</span><span>Suit</span><span>Buyer</span><span>Seller</span
+            ><span>Price</span>
+          </div>
+          <div
+            id="recent-trades"
+            tabindex="0"
+            aria-label="Recent trades, newest first. Scroll horizontally for older trades."
+          ></div>
+        </div>
+      </section>
+      <details class="diagnostics">
+        <summary>Recordings &amp; diagnostics</summary>
+        <div class="ff-record-tools">
+          <button type="button" id="export-recording">Export this round</button
+          ><button type="button" id="export-all-recordings">Export all rounds</button
+          ><span id="recording-details">Waiting for game</span>
+        </div>
+        <div id="round-result-state"></div>
+        <div class="ff-result-input">
+          <select id="revealed-goal" aria-label="Revealed goal suit">
+            <option value="">Revealed goal…</option>
+            <option value="s">♠ Spades</option>
+            <option value="c">♣ Clubs</option>
+            <option value="d">♦ Diamonds</option>
+            <option value="h">♥ Hearts</option></select
+          ><button type="button" id="save-revealed-goal">Record result</button>
+        </div>
+        <textarea id="diagnostics" readonly aria-label="Live adapter diagnostics"></textarea>
+      </details>
+      <footer>
+        <span id="update-state">Waiting for source</span
+        ><span>Every execution clears all quotes.</span
+        ><span>Manual actions only · model runs locally</span>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "figgie-terminal",
+  "version": "0.13.3",
+  "private": true,
+  "description": "A local Chrome terminal for manual Figgie trading and probabilistic valuation.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jstadeusiak/figgie-terminal.git"
+  },
+  "engines": {
+    "node": "^22.13.0 || >=24.0.0"
+  },
+  "scripts": {
+    "build": "python3 extension/build.py",
+    "test": "node scripts/test.cjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "models:verify": "node tools/model-registry.cjs verify",
+    "package": "npm run build && python3 scripts/package.py",
+    "check": "npm run format:check && npm run build && npm test && npm run models:verify"
+  },
+  "devDependencies": {
+    "acorn": "8.19.0",
+    "jsdom": "29.1.1",
+    "prettier": "3.10.1"
+  }
+}

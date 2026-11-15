@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.x'
+      - run: npm ci
+      - run: npm run check
+      - run: git diff --exit-code -- extension/ui-assets.js
+      - run: npm run package

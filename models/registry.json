@@ -1,0 +1,227 @@
+{
+  "schema": 1,
+  "models": [
+    {
+      "version": "0.3.0",
+      "frozenAt": "2026-10-29T05:01:09.596Z",
+      "description": "Historical v0.3 replay engine.",
+      "provenance": "Previously frozen engine; compatible support files archived now.",
+      "files": {
+        "belief.js": "7f8dbf36dbe399db26f818037a752f516bf65b58465eadfbae64e221befdd58a",
+        "journal.js": "3cf05e4ddc7e25dd88b5f6ab49961f36a893bc7abbd3d58f7ea3c7ee6ba5947e",
+        "model-fit.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a",
+        "pnl.js": "f9afed73ec3e1cf9c16c0562e269cc92a4afb6ec7a39b76f45bc35754c4e1467",
+        "training.js": "fac5b2c989e6f169ca2ace399a648d3d9c4d0341e210ce38898beace9a9abd40",
+        "bonus-score.js": "40c15e87dcdf146cde01c5d3bd87fbbfa0d41c7574201adad7680fb9f9ed9a3c",
+        "model-fit-v0.10.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a"
+      },
+      "bundleSha256": "917034591d9a11bd6feef18687af2d2863920bef7d5336fe7318aff446c5ad55"
+    },
+    {
+      "version": "0.4.0",
+      "frozenAt": "2026-10-29T05:01:09.602Z",
+      "description": "Historical v0.4 replay engine.",
+      "provenance": "Previously frozen engine; compatible support files archived now.",
+      "files": {
+        "belief.js": "25a544dbb8b97ce387866e39cec6616f6ed736e23a2fe79ae3daacfa86561a39",
+        "journal.js": "3cf05e4ddc7e25dd88b5f6ab49961f36a893bc7abbd3d58f7ea3c7ee6ba5947e",
+        "model-fit.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a",
+        "pnl.js": "f9afed73ec3e1cf9c16c0562e269cc92a4afb6ec7a39b76f45bc35754c4e1467",
+        "training.js": "fac5b2c989e6f169ca2ace399a648d3d9c4d0341e210ce38898beace9a9abd40",
+        "bonus-score.js": "40c15e87dcdf146cde01c5d3bd87fbbfa0d41c7574201adad7680fb9f9ed9a3c",
+        "model-fit-v0.10.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a"
+      },
+      "bundleSha256": "35a97e4467552cb96d5f4063f825d44ff42a74c68374d35d09daf60acbb85949"
+    },
+    {
+      "version": "0.5.0",
+      "frozenAt": "2026-10-29T05:01:09.616Z",
+      "description": "Historical v0.5 replay engine.",
+      "provenance": "Previously frozen engine; compatible support files archived now.",
+      "files": {
+        "belief.js": "f534e1c4170a9d9af1d9e67bd51033c07f1428218b0588cd6a24065a79ae18e1",
+        "journal.js": "3cf05e4ddc7e25dd88b5f6ab49961f36a893bc7abbd3d58f7ea3c7ee6ba5947e",
+        "model-fit.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a",
+        "pnl.js": "f9afed73ec3e1cf9c16c0562e269cc92a4afb6ec7a39b76f45bc35754c4e1467",
+        "training.js": "fac5b2c989e6f169ca2ace399a648d3d9c4d0341e210ce38898beace9a9abd40",
+        "bonus-score.js": "40c15e87dcdf146cde01c5d3bd87fbbfa0d41c7574201adad7680fb9f9ed9a3c",
+        "model-fit-v0.10.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a"
+      },
+      "bundleSha256": "7f220e7273246a1cc218f23211912e43cbf71defe1c74644a2ea2609c9ea4ef0"
+    },
+    {
+      "version": "0.6.0",
+      "frozenAt": "2026-10-29T05:01:09.621Z",
+      "description": "Historical v0.6 replay engine.",
+      "provenance": "Previously frozen engine; compatible support files archived now.",
+      "files": {
+        "belief.js": "2d0a0a5283be794b24eb70726310db67754732a390b689c408c74b3b3da2b733",
+        "journal.js": "3cf05e4ddc7e25dd88b5f6ab49961f36a893bc7abbd3d58f7ea3c7ee6ba5947e",
+        "model-fit.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a",
+        "pnl.js": "f9afed73ec3e1cf9c16c0562e269cc92a4afb6ec7a39b76f45bc35754c4e1467",
+        "training.js": "fac5b2c989e6f169ca2ace399a648d3d9c4d0341e210ce38898beace9a9abd40",
+        "bonus-score.js": "40c15e87dcdf146cde01c5d3bd87fbbfa0d41c7574201adad7680fb9f9ed9a3c",
+        "model-fit-v0.10.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a"
+      },
+      "bundleSha256": "d22d763696745b220e1835240845ae1183169c2641e2b55933fdd28bf94994cd"
+    },
+    {
+      "version": "0.7.0",
+      "frozenAt": "2026-10-29T05:01:09.625Z",
+      "description": "Historical v0.7 replay engine.",
+      "provenance": "Previously frozen engine; compatible support files archived now.",
+      "files": {
+        "belief.js": "5df656d822f70ee2144362f7bdd0148f963fdcac617bd173e373301c71322b2c",
+        "journal.js": "3cf05e4ddc7e25dd88b5f6ab49961f36a893bc7abbd3d58f7ea3c7ee6ba5947e",
+        "model-fit.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a",
+        "pnl.js": "f9afed73ec3e1cf9c16c0562e269cc92a4afb6ec7a39b76f45bc35754c4e1467",
+        "training.js": "fac5b2c989e6f169ca2ace399a648d3d9c4d0341e210ce38898beace9a9abd40",
+        "bonus-score.js": "40c15e87dcdf146cde01c5d3bd87fbbfa0d41c7574201adad7680fb9f9ed9a3c",
+        "model-fit-v0.10.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a"
+      },
+      "bundleSha256": "bca91bb5431b14ebc6008badbb56b21be7c654dcf82e882482fce899a2ecc74c"
+    },
+    {
+      "version": "0.8.0",
+      "frozenAt": "2026-10-29T05:01:09.628Z",
+      "description": "Historical v0.8 replay engine.",
+      "provenance": "Previously frozen engine; compatible support files archived now.",
+      "files": {
+        "belief.js": "46093065699c945e7c767b8a99c9959717f339b766e10ef2016d88c988ab10de",
+        "journal.js": "3cf05e4ddc7e25dd88b5f6ab49961f36a893bc7abbd3d58f7ea3c7ee6ba5947e",
+        "model-fit.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a",
+        "pnl.js": "f9afed73ec3e1cf9c16c0562e269cc92a4afb6ec7a39b76f45bc35754c4e1467",
+        "training.js": "fac5b2c989e6f169ca2ace399a648d3d9c4d0341e210ce38898beace9a9abd40",
+        "bonus-score.js": "40c15e87dcdf146cde01c5d3bd87fbbfa0d41c7574201adad7680fb9f9ed9a3c",
+        "model-fit-v0.10.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a"
+      },
+      "bundleSha256": "73133d13e8fe61d6d5a1df98f7d966dada98ce7fcf861bba2763bf1548e62774"
+    },
+    {
+      "version": "0.9.0",
+      "frozenAt": "2026-10-29T05:01:09.633Z",
+      "description": "Historical v0.9 replay engine.",
+      "provenance": "Previously frozen engine; compatible support files archived now.",
+      "files": {
+        "belief.js": "331cd380739b357ba9b16ea1e42a909984135d6da0f3ced0c1ccf0e6324e4d32",
+        "journal.js": "3cf05e4ddc7e25dd88b5f6ab49961f36a893bc7abbd3d58f7ea3c7ee6ba5947e",
+        "model-fit.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a",
+        "pnl.js": "f9afed73ec3e1cf9c16c0562e269cc92a4afb6ec7a39b76f45bc35754c4e1467",
+        "training.js": "fac5b2c989e6f169ca2ace399a648d3d9c4d0341e210ce38898beace9a9abd40",
+        "bonus-score.js": "40c15e87dcdf146cde01c5d3bd87fbbfa0d41c7574201adad7680fb9f9ed9a3c",
+        "model-fit-v0.10.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a"
+      },
+      "bundleSha256": "7b31c9936a3b61bc1cec31d7a1fbb2320a3adcf6d2872a07af1df1c73210aa25"
+    },
+    {
+      "version": "0.10.0",
+      "frozenAt": "2026-10-29T05:01:09.637Z",
+      "description": "Deployed fast terminal; static opponent opening beliefs.",
+      "provenance": "Previously frozen engine; compatible support files archived now.",
+      "files": {
+        "belief.js": "1b0d417d63fd2170e901fd063db01f779fe06e0b721bf82e8efaf519e90e086a",
+        "journal.js": "3cf05e4ddc7e25dd88b5f6ab49961f36a893bc7abbd3d58f7ea3c7ee6ba5947e",
+        "model-fit.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a",
+        "pnl.js": "f9afed73ec3e1cf9c16c0562e269cc92a4afb6ec7a39b76f45bc35754c4e1467",
+        "training.js": "fac5b2c989e6f169ca2ace399a648d3d9c4d0341e210ce38898beace9a9abd40",
+        "bonus-score.js": "40c15e87dcdf146cde01c5d3bd87fbbfa0d41c7574201adad7680fb9f9ed9a3c",
+        "model-fit-v0.10.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a"
+      },
+      "bundleSha256": "4abb8b141d825f39cec6d3125c11b5050bb04bba18987461f7487be792602d60"
+    },
+    {
+      "version": "0.11.0",
+      "frozenAt": "2026-10-29T05:07:19.694Z",
+      "description": "Opponent public-learning: causal trade/ask constraints, exact private goal masses, named counterparty bonus values, 12 bonus samples; evaluated against frozen 0.10 on recorded rounds.",
+      "provenance": "Complete source snapshot at release.",
+      "files": {
+        "belief.js": "fc74d44fe73579bce7dc0fdc2c9b30cff69e2f3ebbb10e989fa45451578b3142",
+        "journal.js": "c724ae98f5aee3a2079dfe627e3e146db7bd09084a1f76ed859808511fba6e71",
+        "model-fit.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a",
+        "pnl.js": "f9afed73ec3e1cf9c16c0562e269cc92a4afb6ec7a39b76f45bc35754c4e1467",
+        "training.js": "fac5b2c989e6f169ca2ace399a648d3d9c4d0341e210ce38898beace9a9abd40",
+        "bonus-score.js": "40c15e87dcdf146cde01c5d3bd87fbbfa0d41c7574201adad7680fb9f9ed9a3c"
+      },
+      "bundleSha256": "b77c7ccf93a7595c5a14871f37f5c522328f056add50b6b7ec309be393c7416d"
+    },
+    {
+      "version": "0.12.0",
+      "frozenAt": "2026-10-29T17:04:12.188Z",
+      "description": "Goal-allocation stratification and original-proposal ESS guard. Numerical stability candidate selected after frozen train/validation; immutable before final400 synthetic test. No new signal coefficients.",
+      "provenance": "Complete source snapshot at release.",
+      "files": {
+        "belief.js": "988c8fa3b1eea9a6ae89f455d90f2bda44afd2aa9065b19717ab3fb2692b0181",
+        "journal.js": "c724ae98f5aee3a2079dfe627e3e146db7bd09084a1f76ed859808511fba6e71",
+        "model-fit.js": "0388851ba7f9d2a51a15720a0144b45b09bca8208f80fe7dcb1a64cd8312880a",
+        "pnl.js": "f9afed73ec3e1cf9c16c0562e269cc92a4afb6ec7a39b76f45bc35754c4e1467",
+        "training.js": "fac5b2c989e6f169ca2ace399a648d3d9c4d0341e210ce38898beace9a9abd40",
+        "bonus-score.js": "b3dec778c39b346e20ce12461f532235228fa4519ece1dfe9cfd3542da0dc092"
+      },
+      "bundleSha256": "d3d1a89f6e5ce11360e3654108d4e682f99e0b3fb8f11ce74fb2da6df07730a3"
+    },
+    {
+      "version": "0.13.0",
+      "frozenAt": "2026-10-30T19:09:00.976Z",
+      "description": "Four-player Medium goal-likelihood calibration: LR16, unchanged55%mixture and conditional inventories. Fixed28development/10validation/10test recorded comparison; Brier,logloss andstaticEV MSE improved. Retrospective, confidence intervals includezero; latest25motivating excluded from selection.",
+      "provenance": "Complete source snapshot at release.",
+      "files": {
+        "belief.js": "cd28a7eac88a8c72577fc526746671cc9717b65369d897e25be0d55da9eaeb5b",
+        "journal.js": "5ce19bc8c6b77aec98bddc69126dd709cc755c62cb4e6a8c40c19eb63be29d85",
+        "model-fit.js": "7386d547c37b47d0c4945ebad6d565a8ca21b7cbcafd64646daf23e6df615873",
+        "pnl.js": "f9afed73ec3e1cf9c16c0562e269cc92a4afb6ec7a39b76f45bc35754c4e1467",
+        "training.js": "fac5b2c989e6f169ca2ace399a648d3d9c4d0341e210ce38898beace9a9abd40",
+        "bonus-score.js": "b3dec778c39b346e20ce12461f532235228fa4519ece1dfe9cfd3542da0dc092",
+        "goal-signal.js": "c63a5bc71601110d100f5a049bc6386c06cb2ec2049dec01477a34d5b1526955"
+      },
+      "bundleSha256": "71fc99d9d2d30dcfe73fea11696051da9d4214f22718e12ae2a641b2195b3dba"
+    },
+    {
+      "version": "0.13.1",
+      "frozenAt": "2026-11-14T08:10:59.929Z",
+      "description": "Readable source and repository cleanup; model behavior, probability weights, and pricing unchanged from 0.13.0. Syntax-equivalence and full-pricing parity verified.",
+      "provenance": "Complete source snapshot at release.",
+      "files": {
+        "belief.js": "f6246e13733b263df911048918f705901b7fc8c331a7ee5bf076cf3edf9560f2",
+        "journal.js": "0cdd7ff5582c1cbd8101fbc26aa12b0e79e7a54871487234cbf4f53c678ecc2a",
+        "model-fit.js": "4e40662af8ce9ec6c11ee6c6bb9d3a026a47d3a416fe7acd90123f9cedd12f45",
+        "pnl.js": "67b8c5a52005d9f1e15e1aea5613a92ebc846c73a5918c2ed56de0a1b3f56c5b",
+        "training.js": "735f9519f126f67e67e865d04af84e720ab33700f2e09e2599b4588402dbd00c",
+        "bonus-score.js": "3f787335b29524d85d3915e4fbcee3a8acedf6bf2eb99607d3a366f9cfdab35a",
+        "goal-signal.js": "e223a45293b5badb03cd696103ed9a6498efa55d7ce164ce15d71272e275e09f"
+      },
+      "bundleSha256": "639c127bbc59cc4484f263d8da9e8563e7c6658e02b3fc6d25f37c9364470ff8"
+    },
+    {
+      "version": "0.13.2",
+      "frozenAt": "2026-11-14T08:16:27.768Z",
+      "description": "Source and documentation cleanup; syntax and exact inference/pricing parity with v0.13.0; no inference behavior changes.",
+      "provenance": "Complete source snapshot at release.",
+      "files": {
+        "belief.js": "70e0213c999c1f099126c40aa65b1904d3e926f5f6cb89a170011a9e199a071f",
+        "journal.js": "0cdd7ff5582c1cbd8101fbc26aa12b0e79e7a54871487234cbf4f53c678ecc2a",
+        "model-fit.js": "4e40662af8ce9ec6c11ee6c6bb9d3a026a47d3a416fe7acd90123f9cedd12f45",
+        "pnl.js": "67b8c5a52005d9f1e15e1aea5613a92ebc846c73a5918c2ed56de0a1b3f56c5b",
+        "training.js": "735f9519f126f67e67e865d04af84e720ab33700f2e09e2599b4588402dbd00c",
+        "bonus-score.js": "3f787335b29524d85d3915e4fbcee3a8acedf6bf2eb99607d3a366f9cfdab35a",
+        "goal-signal.js": "e223a45293b5badb03cd696103ed9a6498efa55d7ce164ce15d71272e275e09f"
+      },
+      "bundleSha256": "50401f2e112899c0405926387a8348de32ccfb3d62409db5ea9fc3511d7a0915"
+    },
+    {
+      "version": "0.13.3",
+      "frozenAt": "2026-11-14T13:46:01.044Z",
+      "description": "Readable model sources: the same computations rewritten with named constants and small functions. Exact numeric parity with v0.13.0 on the seeded parity cases (work/model-parity.cjs); no inference, pricing, recording, or scoring change.",
+      "provenance": "Complete source snapshot at release.",
+      "files": {
+        "belief.js": "46b4086cbea6743f15354fa9de1de89d9ca2bcd9d6ac299f164c25900a4a1361",
+        "journal.js": "bf0ed9fd20f348315c4438bfbddc948501006b59882278cf228b52cd7058d728",
+        "model-fit.js": "c2b39d06ce4bf47d615d1f83ea12bc3113e70506695f01900a8945f5e0581967",
+        "pnl.js": "884c4e929a28fc2f2063df86284bff9cbba901a6d8a7b7994ef39d8e58688796",
+        "training.js": "684914e5080dbc4ca0e17b0b685ff1b0f21f803c89256d1c8c4cc62229163e3b",
+        "bonus-score.js": "a7075c49132ab22df8e36f8e22c0f9fea993594e8d6f48bd52b6dc9b50bb11e6",
+        "goal-signal.js": "1322f0cf6071d4651702e8963d54e574b1114627b5d8e6280b569835f38c69fa"
+      },
+      "bundleSha256": "96a80d591ddc772bb6f7814d22f1c6dd3b03cbf92c1d5da56192180bf3596ebf"
+    }
+  ]
+}
